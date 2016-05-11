@@ -1,0 +1,235 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              tools:context=".preferences.PreferencesActivityFragment"
+              tools:showIn="@layout/activity_preferences"
+              android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Mot de passe principal:"
+            android:id="@+id/textView10"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editTextMotDePasse"
+            android:hint="Le dernier mot de passe que vous aurez à retenir"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Déverouillage alternatif:"
+        android:id="@+id/textView13"/>
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/radioGroupDevAlternatif"
+        android:layout_gravity="center_horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aucun"
+            android:id="@+id/radioButtonAucun"
+            android:layout_weight="0.33"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schéma"
+            android:id="@+id/radioButtonSchema"
+            android:layout_weight="0.33"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numérique"
+            android:id="@+id/radioButtonNumerique"
+            android:layout_weight="0.33"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutSchema">
+
+        <lpi.motsdepasse.login.PatternLockView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/viewLockPattern"
+            android:layout_gravity="center_horizontal"
+            app:ratioDiametreCercle="0.25"
+            app:confirmer="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutChiffre">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Code numérique:"
+            android:id="@+id/textView11"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0000"
+            android:id="@+id/textViewCodeNumerique"
+            android:typeface="monospace"
+            android:layout_gravity="center_horizontal"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:layout_margin="2dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/buttonZero"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:onClick="onClickPaveNumerique"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/buttonUn"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:onClick="onClickPaveNumerique"
+                />
+
+            <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/buttonDeux"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:onClick="onClickPaveNumerique"
+            />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/buttonTrois"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:onClick="onClickPaveNumerique"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:id="@+id/buttonQuatre"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:onClick="onClickPaveNumerique"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/buttonCinq"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:onClick="onClickPaveNumerique"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:id="@+id/buttonSix"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:onClick="onClickPaveNumerique"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:id="@+id/buttonSept"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:onClick="onClickPaveNumerique"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:id="@+id/buttonHuit"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:onClick="onClickPaveNumerique"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:id="@+id/buttonNeuf"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:onClick="onClickPaveNumerique"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:id="@+id/buttonEfface"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:onClick="onClickPaveNumerique"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:id="@+id/buttonClear"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:onClick="onClickPaveNumerique"/>
+        </GridLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

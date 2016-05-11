@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="lpi.motsdepasse"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EditMotDePasseActivity"
+            android:label="@string/title_activity_edit_mot_de_passe"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lpi.motsdepasse.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lpi.motsdepasse.MainActivity"/>
+        </activity>
+        <activity android:name=".AfficheMotDePasseActivity">
+        </activity>
+        <activity
+            android:name=".preferences.PreferencesActivity"
+            android:label="@string/title_activity_preferences"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lpi.motsdepasse.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".preferences.LockPatternEditActivity"
+            android:label="@string/title_activity_lock_pattern_edit"
+            android:parentActivityName=".preferences.PreferencesActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".preferences.PreferencesActivity"/>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="PatternLockView">
+        <attr name="confirmer" format="boolean"/>
+        <attr name="ratioDiametreCercle" format="float"/>
+        <attr name="fondCercle" format="color"/>
+        <attr name="fondFocus" format="color"/>
+        <attr name="cercleEteint" format="color"/>
+        <attr name="cercleActif" format="color"/>
+    </declare-styleable>
+</resources>
